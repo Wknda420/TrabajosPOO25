@@ -130,7 +130,7 @@ class Bodega extends Equipaje {
 
     @Override
     public void agregarAlTotal (PrecioTotal total) {
-        total.agregarAlTotalBodega(this.calcularPrecio());
+        totalizador.visitarBodega(this);
     }
 }
 
@@ -156,6 +156,6 @@ class Cabina extends Equipaje {
 
     @Override
     public void agregarAlTotal (PrecioTotal total) {
-        total.agregarAlTotalCabina(this.calcularPrecio());
+        totalizador.visitarCabina(this);
     }
 }
