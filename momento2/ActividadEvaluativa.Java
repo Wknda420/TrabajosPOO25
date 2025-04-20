@@ -123,11 +123,12 @@ class Bodega extends Equipaje {
         super(peso, tamaño);
 }    
 
-
-    public double calcularPrecio () {
+    @Override
+    public double calcularPrecio () {//formula para equipaje bodega
         return getPrecioBase() + (getPeso() * getTamaño() * CAPACIDAD)
     }
 
+    @Override
     public void aceptar (Totalizador totalizador) {
         totalizador.visitarBodega(this);
     }
