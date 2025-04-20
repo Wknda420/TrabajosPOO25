@@ -59,5 +59,10 @@ class PrecioTotal {
         totalCabina += precio; //suma solo a cabina
     }
 
-
+    public void mostrarTotales() {
+        calcularTotales();
+        System.out.println("Total Equipaje " + totalPrecios);
+        System.out.println("Total Bodeja " + totalBodega);
+        System.out.println("Total Cabina " + totalCabina);
+    }
 }
