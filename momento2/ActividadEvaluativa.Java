@@ -159,3 +159,13 @@ class Cabina extends Equipaje {
         totalizador.visitarCabina(this);
     }
 }
+
+class Totalizador {
+    private final PrecioTotal precioTotal;
+
+    public Totalizador(PrecioTotal precioTotal) {
+        double precio = bodega.calcularPrecio();
+        precioTotal.agregarAlTotal(precio);
+        precioTotal.agregarAlTotalBodega(precio);
+    }
+}
