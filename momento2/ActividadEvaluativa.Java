@@ -37,5 +37,14 @@ class PrecioTotal {
         //Inicia los totales en cero
     }
 
+    public void calcularTotales() {
+        for (Equipaje e : equipaje) {
+            Totalizador totalizador = new Totalizador(this);
+            e.aceptar (totalizador);
+            /* e. porque este sabe si es bodega o cabina
+            y llama al metodo especifico del totalizador*/
+        }
+    }
+
 
 }
