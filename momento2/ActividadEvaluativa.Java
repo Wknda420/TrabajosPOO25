@@ -46,5 +46,18 @@ class PrecioTotal {
         }
     }
 
+    //metodos acumuladores de precios
+    public void agregarAlTotal(double precio) {
+        totalPrecios += precio; //suma total general
+    }
+
+    public void agregarAlTotalBodega(double precio) {
+        totalBodega += precio; //suma solo a bodega
+    }
+
+    public void agregarAlTotalCabina(double precio) {
+        totalCabina += precio; //suma solo a cabina
+    }
+
 
 }
