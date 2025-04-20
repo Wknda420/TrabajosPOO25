@@ -15,5 +15,17 @@ public class ActividadEvaluativa {
 
 class PrecioTotal {
 
+    private double totalPrecios;
+    private double totalBodega;
+    private double totalCabina;
+    private Equipaje[] equipaje;
+
+    public PrecioTotal(Equipaje[] equipaje) {
+        this.equipaje = equipaje;
+        this.totalPrecios = 0.0;
+        this.totalBodega = 0.0;
+        this.totalCabina = 0.0;
+    }
+
     
 }
