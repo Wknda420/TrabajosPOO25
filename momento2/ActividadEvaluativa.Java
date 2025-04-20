@@ -105,3 +105,18 @@ abstract class Equipaje {
         return precioBase;
     }
 }
+
+class Bodega extends Equipaje {
+    private static final double CAPACIDAD = 8.0;
+
+    public Bodega() {
+        super();
+    }
+
+    public Bodega(double precioBase) {
+        super(precioBase);
+    }
+
+    public Bodega(double peso, double tamaño) {
+        super(peso, tamaño);
+    
