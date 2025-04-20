@@ -106,17 +106,19 @@ abstract class Equipaje {
     }
 }
 
+
+//extends equipaje muestra que Bodega es subclase de Equipaje y hereda atributos
 class Bodega extends Equipaje {
     private static final double CAPACIDAD = 8.0;
 
-    public Bodega() {
+    public Bodega() {//constructor por defecto
         super();
     }
 
-    public Bodega(double precioBase) {
+    public Bodega(double precioBase) {//constructor con precio base
         super(precioBase);
     }
 
-    public Bodega(double peso, double tamaño) {
+    public Bodega(double peso, double tamaño) {//constructor completo
         super(peso, tamaño);
-    
+}    
