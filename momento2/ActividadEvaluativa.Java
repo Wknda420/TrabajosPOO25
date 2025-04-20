@@ -90,9 +90,11 @@ abstract class Equipaje {
         //constantes como valores default
     }
 
+    //metodos
     public abstract double calcularPrecio();
     public abstract void aceptar(Totalizador totalizador);
 
+    //metodos concretos(getters)
     public double getPeso() {
         return peso;
     }
