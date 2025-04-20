@@ -134,3 +134,28 @@ class Bodega extends Equipaje {
     }
 }
 
+class Cabina extends Equipaje {
+    private static final int TIEMPO = 2;
+
+    public Cabina() {
+        super();
+    }
+
+    public Cabina(double precioBase) {
+        super(precioBase);
+    }
+
+    public Cabina(double peso, double tamaño) {
+        super(peso, tamaño);
+    }
+
+    @Override
+    public double calcularPrecio () {
+        return getPrecioBase() + (getPeso() * getTamaño() * TIEMPO)
+    }
+
+    @Override
+    public void agregarAlTotal (PrecioTotal total) {
+        total.agregarAlTotalCabina(this.calcularPrecio());
+    }
+}
