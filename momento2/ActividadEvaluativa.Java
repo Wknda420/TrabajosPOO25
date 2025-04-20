@@ -129,7 +129,8 @@ class Bodega extends Equipaje {
     }
 
     @Override
-    public void aceptar (Totalizador totalizador) {
-        totalizador.visitarBodega(this);
+    public void agregarAlTotal (PrecioTotal total) {
+        total.agregarAlTotalBodega(this.calcularPrecio());
     }
 }
+
