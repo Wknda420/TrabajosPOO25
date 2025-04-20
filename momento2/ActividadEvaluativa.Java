@@ -149,8 +149,9 @@ class Cabina extends Equipaje {
         super(peso, tamaño);
     }
 
+    //metodos sobrescritos
     @Override
-    public double calcularPrecio () {
+    public double calcularPrecio () {//formula para equipaje cabina
         return getPrecioBase() + (getPeso() * getTamaño() * TIEMPO)
     }
 
@@ -167,5 +168,10 @@ class Totalizador {
         double precio = bodega.calcularPrecio();
         precioTotal.agregarAlTotal(precio);
         precioTotal.agregarAlTotalBodega(precio);
+    }
+    public void visitarCabina(Cabina cabina) {
+        double precio = cabina.calcularPrecio();
+        precioTotal.agregarAlTotal(precio);
+        precioTotal.agregarAlTotalCabina(precio);
     }
 }
