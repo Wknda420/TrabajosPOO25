@@ -13,3 +13,7 @@ public class ActividadEvaluativa {
     }
 }
 
+class PrecioTotal {
+
+    
+}
