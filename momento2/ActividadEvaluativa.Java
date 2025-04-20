@@ -16,9 +16,9 @@ public class ActividadEvaluativa {
 class PrecioTotal {
 
     //atributos de la clase PrecioTotal
-    
+
     private double totalPrecios;
-    //caumula la suma de precios de todo los equipajes
+    //acumula la suma de precios de todo los equipajes
     private double totalBodega;
     //acumula solo precios de tipo bodega
     private double totalCabina;
@@ -27,11 +27,14 @@ class PrecioTotal {
     //este arreglo almacena todos los equipajes
 
 
+    //constructor
     public PrecioTotal(Equipaje[] equipaje) {
         this.equipaje = equipaje;
+        //asigna el arreglo que se recibe
         this.totalPrecios = 0.0;
         this.totalBodega = 0.0;
         this.totalCabina = 0.0;
+        //Inicia los totales en cero
     }
 
 
