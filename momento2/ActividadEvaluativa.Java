@@ -66,3 +66,24 @@ class PrecioTotal {
         System.out.println("Total Cabina " + totalCabina);
     }
 }
+
+abstract class Equipaje { 
+    protected static final double PESO = 10.0;
+    protected static final double TAMAÑO = 4.5;
+    protected static final double PRECIO_BASE = 1000.0;
+
+    protected double peso;
+    protected double tamaño;
+    protected double precioBase;
+
+    public Equipaje(){
+        this(PESO,TAMAÑO);
+    }
+
+    public Equipaje(double precioBase) {
+        this();
+        this.precioBase = PRECIO_BASE;
+    }
+
+    
+}
