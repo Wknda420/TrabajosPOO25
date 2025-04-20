@@ -76,13 +76,18 @@ abstract class Equipaje {
     protected double tamaño;
     protected double precioBase;
 
+//protected porque solo esta clase y sus subclases pueden acceder
+
+
+//constructor
     public Equipaje(){
         this(PESO,TAMAÑO);
     }
 
     public Equipaje(double precioBase) {
         this();
-        this.precioBase = PRECIO_BASE;
+        this.precioBase = PRECIO_BASE; 
+        //constantes como valores default
     }
 
     
