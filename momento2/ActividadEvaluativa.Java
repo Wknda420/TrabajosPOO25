@@ -122,3 +122,13 @@ class Bodega extends Equipaje {
     public Bodega(double peso, double tamaño) {//constructor completo
         super(peso, tamaño);
 }    
+
+
+    public double calcularPrecio () {
+        return getPrecioBase() + (getPeso() * getTamaño() * CAPACIDAD)
+    }
+
+    public void aceptar (Totalizador totalizador) {
+        totalizador.visitarBodega(this);
+    }
+}
