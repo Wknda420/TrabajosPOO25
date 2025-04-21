@@ -35,7 +35,7 @@ public class TarifadorParqueaderos {
         System.out.print("Puesto (1-20): ");
         int puesto = sc.nextInt() - 1;
         
-        if (!puestos[puesto]) {
+        if (!puestos[puesto]) {//"!puesto" verifica si esta ocupado
             System.out.println("Libre");
             return;
         }
