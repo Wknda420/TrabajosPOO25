@@ -13,7 +13,7 @@ public class TarifadorParqueaderos {
     public static void mostrarMenuPrincipal() {
         int opcion;
         do {
-            System.out.println("\n=== MENÚ PRINCIPAL ===");
+            System.out.println("=== MENÚ PRINCIPAL ===");
             System.out.println("1. Registrar moto");
             System.out.println("2. Cobrar tarifa");
             System.out.println("3. Salir");
