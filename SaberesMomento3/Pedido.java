@@ -54,6 +54,16 @@ public class Pedido {
 
     public int getNumeroTarjetaCredito() {
         return numeroTarjetaCredito;
+
+        /*si quisiera que se muestre al ejecutar el numero de cuenta
+         * pero que aparezca una parte oculta cambiaria este get a la siguinete manera:
+         *   public String getNumeroTarjetaCreditoEnmascarado() {
+            String num = String.valueOf(numeroTarjetaCredito);
+            return "****-****-" + num.substring(num.length() - 4);
+            }
+            y en ejecutar agregaria la siguiente linea:
+            System.out.println("Número de tarjeta: " + pedido.getNumeroTarjetaCredito());
+         */
     }
 
     public void setNumeroTarjetaCredito(int numeroTarjetaCredito) {

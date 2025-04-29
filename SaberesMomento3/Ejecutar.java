@@ -6,7 +6,7 @@ public class Ejecutar{//Clase para pruebas principal
         Producto producto = new Producto(111);
         Pedido pedido = new Pedido(cliente, producto, new java.util.Date(), 153684482);
     
-        
+        System.out.println("                                               ");
         System.out.println("-x-x-x-x-x-x Detalles de su pedido x-x-x-x-x-x-");
         System.out.println("Cliente: " + pedido.getCliente().getNombre());
         System.out.println("N° de producto: " + pedido.getProducto().getNumero());
@@ -24,6 +24,9 @@ public class Ejecutar{//Clase para pruebas principal
 
     //ej de un objeto independiente
     Camara camara = new Camara("Honor", "X7a");
-    System.out.println("Camara: " + camara.getMarca() + " " + camara.getModelo());
+    System.out.println("                                               ");
+    System.out.println("| Camara |");
+    System.out.println("Marca: " + camara.getMarca());
+    System.out.println("Modelo: " + camara.getModelo());
   }
 }        
