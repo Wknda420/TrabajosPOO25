@@ -5,7 +5,9 @@ public class Ejecutar{//Clase para pruebas principal
         Cliente cliente = new Cliente("1043653622", "Nicole");
         Producto producto = new Producto(111);
         Pedido pedido = new Pedido(cliente, producto, new java.util.Date(), 153684482);
-    //ejemplo de agregacion
+    
+        System.out.println("Pedido creado para: " + pedido.getCliente().getNombre());
+        //ejemplo de agregacion
 
 
     //herencia y polimorfismo
@@ -19,5 +21,6 @@ public class Ejecutar{//Clase para pruebas principal
 
     //ej de un objeto independiente
     Camara camara = new Camara("Honor", "X7a");
+    System.out.println("Camara: " + camara.getMarca() + " " + camara.getModelo());
   }
 }        
