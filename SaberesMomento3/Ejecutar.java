@@ -11,4 +11,13 @@ public class Ejecutar{//Clase para pruebas principal
     //herencia y polimorfismo
     Foto foto1 = new Foto ("Eladio.jpg");
     foto1.print(); //metodo foto
-}
+
+
+    Impresion impresion = new Impresion("color", foto1);
+    impresion.print(); //Sobrescrito (polimorfismo)
+
+
+    //ej de un objeto independiente
+    Camara camara = new Camara("Honor", "X7a");
+  }
+}        
