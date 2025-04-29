@@ -6,7 +6,10 @@ public class Ejecutar{//Clase para pruebas principal
         Producto producto = new Producto(111);
         Pedido pedido = new Pedido(cliente, producto, new java.util.Date(), 153684482);
     
-        System.out.println("Pedido creado para: " + pedido.getCliente().getNombre());
+        
+        System.out.println("-x-x-x-x-x-x Detalles de su pedido x-x-x-x-x-x-");
+        System.out.println("Cliente: " + pedido.getCliente().getNombre());
+        System.out.println("N° de producto: " + pedido.getProducto().getNumero());
         //ejemplo de agregacion
 
 
