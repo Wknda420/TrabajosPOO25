@@ -15,7 +15,7 @@ public class Ejecutar{//Clase para pruebas principal
     foto1.print(); //metodo foto
 
 
-    Impresion impresion = new Impresion("color", foto1);
+    Impresion impresion = new Impresion("Monocromatico", foto1);
     impresion.print(); //Sobrescrito (polimorfismo)
 
 
