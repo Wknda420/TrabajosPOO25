@@ -21,7 +21,7 @@ public class Impresion extends Foto { /*impresion representa una foto que
     
     @Override
     public void print() { 
-        System.out.println("Impresion a color " + color + " de: " + getFichero());
+        System.out.println("Impresion en color: " + color + " de: " + getFichero());
     }
 
     //getters y setters
