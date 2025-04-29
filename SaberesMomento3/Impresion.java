@@ -24,4 +24,24 @@ public class Impresion extends Foto { /*impresion representa una foto que
         System.out.println("Impresion a color " + color + " de: " + getFichero());
     }
 
+    //getters y setters
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public Foto getFoto() {
+        return foto;
+    }
+
+    public void setFoto(Foto foto) {
+        this.foto = foto;
+    }
+
+    /*Los get y set permiten que se puedan editar y acceder a los
+     * atributos de color y foto, protegen de ediciones erroneas*/
+    
 }
