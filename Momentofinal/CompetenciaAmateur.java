@@ -100,6 +100,16 @@ class Kickboxing extends Competidor {
             System.out.println(this.nombre + "Realizo una combinacion de patda y puño!");
         }
 
+        int daño = (int)(dañoBase * modificadorPeso * modificadorResistencia);
+
+        oponente.recibirGolpe(daño);
+        this.golpesEfectivos++;
+
+        this.resistencia -= rand.nextInt (10) + 5; //el desgaste medio
+
+        if (this.resistencia < 0) this.resistencia = 0;
+
+        System.out.println(this.nombre + "Ataca con tecnica de Kickboxing a " + oponente.getNombre() + "(" + daño + " Puntos de daño). Resistencia: " + this.resistencia);
         
     }
 }
