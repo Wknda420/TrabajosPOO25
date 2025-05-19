@@ -98,7 +98,7 @@ class Kickboxing extends Competidor {
         if (rand.nextDouble()> 0.5) {
             dañoBase += 3; //ataque balanceado
 
-            System.out.println(this.nombre + "Realizo una combinacion de patda y puño!");
+            System.out.println(this.nombre + " Realizo una combinacion de patada y puño!");
         }
 
         int daño = (int)(dañoBase * modificadorPeso * modificadorResistencia);
@@ -110,7 +110,7 @@ class Kickboxing extends Competidor {
 
         if (this.resistencia < 0) this.resistencia = 0;
 
-        System.out.println(this.nombre + "Ataca con tecnica de Kickboxing a " + oponente.getNombre() + "(" + daño + " Puntos de daño). Resistencia: " + this.resistencia);
+        System.out.println(this.nombre + " Ataca con tecnica de Kickboxing a " + oponente.getNombre() + " (" + daño + " Puntos de daño). Resistencia: " + this.resistencia);
 
     }
 
@@ -143,7 +143,7 @@ class MuayThai extends Competidor {
         this.resistencia -= rand.nextInt(12) + 5; //Desgaste mayor
         if (this.resistencia < 0) this.resistencia = 0;
 
-        System.out.println(this.nombre + "Lanza una patada con potencia de muay thai a " + oponente.getNombre() + "(" + daño + "puntos de daño). Resistencia: " + this.resistencia);
+        System.out.println(this.nombre + " Lanza una patada con potencia de muay thai a " + oponente.getNombre() + " (" + daño + " puntos de daño). Resistencia: " + this.resistencia);
     }
 
     @Override
@@ -180,7 +180,7 @@ class Boxeo extends Competidor {
         this.resistencia -= rand.nextInt(10) + 4; //desgaste medio
         if (this.resistencia < 0) this.resistencia = 0;
 
-        System.out.println(this.nombre + "golpea con tecnica de Boxeo a " + oponente.getNombre() + "(" + daño + " puntos de daño). Resistencia: " + this.resistencia);
+        System.out.println(this.nombre + " golpea con tecnica de Boxeo a " + oponente.getNombre() + " (" + daño + " puntos de daño). Resistencia: " + this.resistencia);
     }
 
     @Override
@@ -237,7 +237,7 @@ class CompetenciaAmater{
 
         int accionesPorAsalto = 5;
         for (int i = 1; i <= accionesPorAsalto && esquinaRoja.estaEnPie() && esquinaAzul.estaEnPie(); i++){
-            System.out.println("Accion " + i + ":");
+            System.out.println("COMBINACION " + i + ": ");
 
             if (i % 2 == 0) {
                 esquinaAzul.atacar(esquinaRoja);
@@ -262,8 +262,8 @@ class CompetenciaAmater{
             esquinaRoja.añadirPuntuacion(puntos1);
             esquinaAzul.añadirPuntuacion(puntos2);
 
-            System.out.println(" Puntuacion del asalto " + asaltoActual + ":");
-            System.out.println(esquinaRoja.getNombre() + ":" + puntos1 + " puntos");
+            System.out.println(" Puntuacion del asalto " + asaltoActual + ": ");
+            System.out.println(esquinaRoja.getNombre() + ": " + puntos1 + " puntos");
             System.out.println(esquinaAzul.getNombre() + ": " + puntos2 + " puntos");
         }
 
@@ -273,14 +273,14 @@ class CompetenciaAmater{
             if (!esquinaRoja.estaEnPie() && !esquinaAzul.estaEnPie()) {
                 System.out.println("¡Doble KO! El combate se empata.");
             }else if (!esquinaAzul.estaEnPie()) {
-                System.out.println("¡KO! " + esquinaAzul.getNombre() + "gana el combate!");
+                System.out.println("¡KO! " + esquinaAzul.getNombre() + " gana el combate!");
             } else { 
                 System.out.println("Desicion de los jueces: ");
                 System.out.println(esquinaRoja.getNombre() + ": " + esquinaRoja.getPuntuacionJueces() + " puntos");
                 System.out.println(esquinaAzul.getNombre() + ": " + esquinaAzul.getPuntuacionJueces() + " puntos");
 
                 if(esquinaRoja.getPuntuacionJueces() > esquinaAzul.getPuntuacionJueces()) {
-                    System.out.println("¡Ganador por decision unanime: " + esquinaRoja.getNombre() + "!");
+                    System.out.println("¡Ganador por decision unanime: " + esquinaRoja.getNombre() + "co!");
                 }else if (esquinaAzul.getPuntuacionJueces() > esquinaRoja.getPuntuacionJueces()) {
                     System.out.println("¡Ganador por desicion dividida: " + esquinaAzul.getNombre() + "!");
                 }else {
@@ -298,7 +298,7 @@ class CompetenciaAmater{
         System.out.println("BIENVENIDO AL SIMULADOR DE COMBATES AMATEUR");
         System.out.println("-------------------------------------------");
 
-        System.out.println("Datos de la esquina roja: ");
+        System.out.println("Datos de la esquina roja| ");
         System.out.print("Nombre: ");
         String nombre1 = scanner.nextLine();
         System.out.println("Peso (kg): ");
@@ -308,7 +308,7 @@ class CompetenciaAmater{
         int estilo1 = scanner.nextInt();
         scanner.nextLine();
 
-        System.out.println("Datos de la esquina azul: ");
+        System.out.println("Datos de la esquina azul| ");
         System.out.print("Nombre: ");
         String nombre2 = scanner.nextLine();
         System.out.println("Peso (kg): ");
