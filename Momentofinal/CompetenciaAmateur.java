@@ -202,7 +202,58 @@ class CompetenciaAmater{
         this.asaltoActual = 1;
     }
 
-    
+    public void iniciarCombate(){
+        System.out.println("Comienza el combate amateur");
+        System.out.println(esquinaRoja.getNombre() + "(" + esquinaRoja.getEstilo() +  ", " + esquinaRoja.getPeso() + "kg)");
+        System.out.println(" vs ");
+        System.out.println(esquinaAzul.getNombre() + "(" + esquinaAzul.getEstilo() +  ", " + esquinaAzul.getPeso() + "kg)");
+        System.out.println("-----------------------------------------------------------------------------------------------");
 
+        /*esta parte controla el bucle del combate o se alos asalto y descansos entre rounds */
+        while (asaltoActual <= TOTAL_ASALTOS && esquinaRoja.estaEnPie() && esquinaAzul.estaEnPie()) {
+            ejecutarAsalto();
+            asaltoActual++; //aumenta los asaltos ejecutados que son de 1 a 3
+
+
+            /*descanso de los asaltos */
+            if (asaltoActual <= TOTAL_ASALTOS && esquinaRoja.estaEnPie() && esquinaAzul.estaEnPie()) {
+
+                System.out.println("----- DESCANSO ENTRE ASALTO -----");
+                esquinaRoja.resistencia += 15;
+                esquinaAzul.resistencia += 15;
+                if (esquinaRoja.resistencia > 100) esquinaRoja.resistencia = 100;
+                if (esquinaAzul.resistencia > 100) esquinaAzul.resistencia = 100; 
+            }
+        }
+
+        mostrarResultado();
+    }
+
+    private void ejecutarAsalto() {
+
+        System.out.println(" ASALTO " + asaltoActual + " - ¡GO!");
+
+        int accionesPorAsalto = 5;
+        for (int i = 1; i <= accionesPorAsalto && esquinaRoja.estaEnPie() && esquinaAzul.estaEnPie(); i++){
+            System.out.println("Accion " + i + ":");
+
+            if (i % 2 == 0) {
+                esquinaAzul.atacar(esquinaRoja);
+                if (esquinaRoja.estaEnPie()) { 
+                    esquinaRoja.atacar(esquinaAzul);
+                }
+            } else {
+                esquinaRoja.atacar(esquinaAzul);
+                if (esquinaAzul.estaEnPie()) {
+                    esquinaAzul.atacar(esquinaRoja);
+                }
+            }
+        }
+
+        puntuarAsalto() {
+            Random rand = new Random();
+            int puntos
+        }
+    }
  }
 }
