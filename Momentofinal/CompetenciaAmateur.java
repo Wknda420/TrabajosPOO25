@@ -252,7 +252,30 @@ class CompetenciaAmater{
 
         puntuarAsalto() {
             Random rand = new Random();
-            int puntos
+            int puntos1 = esquinaRoja.getGolpesEfectivos() * 2 + esquinaRoja.getResistencia() / 10 + rand.nextInt(5);
+            int puntos2 = esquinaAzul.getGolpesEfectivos() * 2 + esquinaAzul.getResistencia() / 10 + rand.nextInt(5);
+
+            esquinaRoja.añadirPuntuacion(puntos1);
+            esquinaAzul.añadirPuntuacion(puntos2);
+
+            System.out.println(" Puntuacion del asalto " + asaltoActual + ":");
+            System.out.println(esquinaRoja.getNombre() + ":" + puntos1 + " puntos");
+            System.out.println(esquinaAzul.getNombre() + ": " + puntos2 + " puntos");
+        }
+
+        private void mostrarResultado() {
+            System.out.println("---------RESULTADO FINAL---------");
+
+            if (!esquinaRoja.estaEnPie() && !esquinaAzul.estaEnPie()) {
+                System.out.println("¡Doble KO! El combate se empata.");
+            }else if (!esquinaAzul.estaEnPie()) {
+                System.out.println("¡KO! " + esquinaAzul.getNombre() + "gana el combate!");
+            } else { 
+                System.out.println("Desicion de los jueces: ");
+                System.out.println(esquinaRoja.getNombre() + ": " + esquinaRoja.getPuntuacionJueces() + " puntos");
+                System.out.println(esquinaAzul.getNombre() + ": " + esquinaAzul.getPuntuacionJueces() + " puntos");
+                
+            }
         }
     }
  }
