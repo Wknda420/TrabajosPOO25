@@ -8,6 +8,7 @@ import java.util.Scanner;
 abstract class Competidor {
     protected String nombre;
     protected double peso; //peso en kg
+    protected String estilo;
     protected int resistencia;
     protected int golpesEfectivos;
     protected int puntuacionJueces;
@@ -36,6 +37,8 @@ abstract class Competidor {
 
     }
 
+    //getters
+
     public boolean estaEnPie() {
         return this.resistencia > 20;
     }
@@ -43,5 +46,50 @@ abstract class Competidor {
     public void añadirPuntuacion(int puntos) {
         this.puntuacionJueces += puntos;
     }
+
+
+    public String getNombre() {
+        return nombre;
+    }
+
+
+    public double getPeso() {
+        return peso;
+    }
+
+
+    public String getEstilo() {
+        return estilo;
+    }
+
+
+    public int getResistencia() {
+        return resistencia;
+    }
+
+
+    public int getGolpesEfectivos() {
+        return golpesEfectivos;
+    }
+
+
+    public int getPuntuacionJueces() {
+        return puntuacionJueces;
+    }
+
+/*Esta clase representa a un competidor de kickboxing*/
+
+class Kickboxing extends Competidor {
+
+    public Kickboxing(String nombre, double peso) {
+        super (nombre, peso, "Kickboxing");
+    }
+
+    @Override
+    public void atacar(Competidor oponente) {
+        Random rand = new Random();
+        double modificadorPeso= this.Peso / 70.0;
+    }
+}
 
 }
