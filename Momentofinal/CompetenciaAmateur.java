@@ -152,7 +152,15 @@ class MuayThai extends Competidor {
 
 }
 
+/*la clase representa un competidor de boxeo*/
 
+class Boxeo extends Competidor {
+    public Boxeo(String nombre, double peso) {
+        super(nombre, peso, "Boxeo");
+    }
+
+    @Override
+}
 
 
 }
