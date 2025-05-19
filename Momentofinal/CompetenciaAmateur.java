@@ -192,9 +192,17 @@ class Boxeo extends Competidor {
 
 class CompetenciaAmater{
     private Competidor esquinaRoja;
-    private Competidor eswuinaAzul;
+    private Competidor esquinaAzul;
     private int asaltoActual;
     private static final int TOTAL_ASALTOS = 3; 
-}
 
+    public CompetenciaAmater(Competidor esquinaRoja, Competidor esquinaAzul) {
+        this.esquinaRoja = esquinaRoja;
+        this.esquinaAzul = esquinaAzul;
+        this.asaltoActual = 1;
+    }
+
+    
+
+ }
 }
