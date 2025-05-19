@@ -110,7 +110,12 @@ class Kickboxing extends Competidor {
         if (this.resistencia < 0) this.resistencia = 0;
 
         System.out.println(this.nombre + "Ataca con tecnica de Kickboxing a " + oponente.getNombre() + "(" + daño + " Puntos de daño). Resistencia: " + this.resistencia);
-        
+
+    }
+
+    @Override
+    public int defender() {
+        return new Random().nextInt(30); //defensa media
     }
 }
 
