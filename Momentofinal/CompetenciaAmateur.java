@@ -88,7 +88,19 @@ class Kickboxing extends Competidor {
     @Override
     public void atacar(Competidor oponente) {
         Random rand = new Random();
-        double modificadorPeso= this.Peso / 70.0;
+        double modificadorPeso= this.peso / 70.0;
+        double modificadorResistencia = this.resistencia / 100.0;
+
+        int dañoBase = rand.nextInt((MAX_GOLPE - MIN_GOLPE) + 1) + MIN_GOLPE;
+        //Kickboxing tiene ataques balanceados
+
+        if (rand.nextDouble()> 0.5) {
+            dañoBase += 3; //ataque balanceado
+
+            System.out.println(this.nombre + "Realizo una combinacion de patda y puño!");
+        }
+
+        
     }
 }
 
