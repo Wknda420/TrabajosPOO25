@@ -274,9 +274,18 @@ class CompetenciaAmater{
                 System.out.println("Desicion de los jueces: ");
                 System.out.println(esquinaRoja.getNombre() + ": " + esquinaRoja.getPuntuacionJueces() + " puntos");
                 System.out.println(esquinaAzul.getNombre() + ": " + esquinaAzul.getPuntuacionJueces() + " puntos");
-                
+
+                if(esquinaRoja.getPuntuacionJueces() > esquinaAzul.getPuntuacionJueces()) {
+                    System.out.println("¡Ganador por decision unanime: " + esquinaRoja.getNombre() + "!");
+                }else if (esquinaAzul.getPuntuacionJueces() > esquinaRoja.getPuntuacionJueces()) {
+                    System.out.println("¡Ganador por desicion dividida: " + esquinaAzul.getNombre() + "!");
+                }else {
+                    System.out.println("¡El combate termina en EMPATE!");
+                }
             }
         }
+
+        
     }
  }
 }
