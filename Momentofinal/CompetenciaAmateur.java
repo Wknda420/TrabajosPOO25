@@ -318,7 +318,18 @@ class CompetenciaAmater{
 
         CompetenciaAmater competencia = new CompetenciaAmater(e1, e2);
 
-        
+        competencia.iniciarCombate();
+
+        scanner.close();
+    }
+
+    private static Competidor crearCompetidor(int estilo, String nombre, double peso) {
+        switch (estilo) {
+            case 1: return new Kickboxing(nombre, peso);
+            case 2: return new MuayThai(nombre, peso);
+            case 3: return new Boxeo(nombre, peso);
+            default: return new Kickboxing(nombre, peso);
+        }
     }
  }
 }
