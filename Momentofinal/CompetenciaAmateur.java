@@ -76,6 +76,7 @@ abstract class Competidor {
     public int getPuntuacionJueces() {
         return puntuacionJueces;
     }
+}
 
 /*Esta clase representa a un competidor de kickboxing*/
 
@@ -163,7 +164,7 @@ class Boxeo extends Competidor {
     public void atacar (Competidor oponente) {
         Random rand = new Random();
         double modificadorPeso = this.peso / 70.0;
-        double modificadorResistencia 0 this.resistencia / 100.0;
+        double modificadorResistencia = this.resistencia / 100.0;
 
         int dañoBase = rand.nextInt((MAX_GOLPE - MIN_GOLPE) + 1) + MIN_GOLPE;
         if(rand.nextDouble() > 0.6) {
@@ -212,6 +213,7 @@ class CompetenciaAmater{
         /*esta parte controla el bucle del combate o se alos asalto y descansos entre rounds */
         while (asaltoActual <= TOTAL_ASALTOS && esquinaRoja.estaEnPie() && esquinaAzul.estaEnPie()) {
             ejecutarAsalto();
+            
             asaltoActual++; //aumenta los asaltos ejecutados que son de 1 a 3
 
 
@@ -249,8 +251,10 @@ class CompetenciaAmater{
                 }
             }
         }
+    }
 
-        puntuarAsalto() {
+        private void puntuarAsalto() {
+
             Random rand = new Random();
             int puntos1 = esquinaRoja.getGolpesEfectivos() * 2 + esquinaRoja.getResistencia() / 10 + rand.nextInt(5);
             int puntos2 = esquinaAzul.getGolpesEfectivos() * 2 + esquinaAzul.getResistencia() / 10 + rand.nextInt(5);
@@ -283,7 +287,8 @@ class CompetenciaAmater{
                     System.out.println("¡El combate termina en EMPATE!");
                 }
             }
-    }
+        }
+    
 
     /*ejecutar */
 
@@ -314,7 +319,7 @@ class CompetenciaAmater{
         scanner.nextLine();
 
         Competidor e1 = crearCompetidor(estilo1, nombre1, peso1);
-        Competidor e2 = crearCompetidor(estilo2, nombre2, peso2),
+        Competidor e2 = crearCompetidor(estilo2, nombre2, peso2);
 
         CompetenciaAmater competencia = new CompetenciaAmater(e1, e2);
 
@@ -332,4 +337,3 @@ class CompetenciaAmater{
         }
     }
  }
-}
