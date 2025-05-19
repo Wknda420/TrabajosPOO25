@@ -302,6 +302,23 @@ class CompetenciaAmater{
         System.out.print("Estilo (1- Kickboxing, 2- MuayThai, 3- Boxeo): ");
         int estilo1 = scanner.nextInt();
         scanner.nextLine();
+
+        System.out.println("Datos de la esquina azul: ");
+        System.out.print("Nombre: ");
+        String nombre2 = scanner.nextLine();
+        System.out.println("Peso (kg): ");
+        double peso2 = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.print("Estilo (1- Kickboxing, 2- MuayThai, 3- Boxeo): ");
+        int estilo2 = scanner.nextInt();
+        scanner.nextLine();
+
+        Competidor e1 = crearCompetidor(estilo1, nombre1, peso1);
+        Competidor e2 = crearCompetidor(estilo2, nombre2, peso2),
+
+        CompetenciaAmater competencia = new CompetenciaAmater(e1, e2);
+
+        
     }
  }
 }
