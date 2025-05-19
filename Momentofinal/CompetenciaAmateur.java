@@ -213,7 +213,7 @@ class CompetenciaAmater{
         /*esta parte controla el bucle del combate o se alos asalto y descansos entre rounds */
         while (asaltoActual <= TOTAL_ASALTOS && esquinaRoja.estaEnPie() && esquinaAzul.estaEnPie()) {
             ejecutarAsalto();
-            
+            puntuarAsalto();
             asaltoActual++; //aumenta los asaltos ejecutados que son de 1 a 3
 
 
