@@ -186,8 +186,15 @@ class Boxeo extends Competidor {
     public int defender() { 
         return new Random().nextInt(35); //Buena dfensa(35%)
     }
-    
 }
 
+/*esta clase maneja la competencia*/
+
+class CompetenciaAmater{
+    private Competidor esquinaRoja;
+    private Competidor eswuinaAzul;
+    private int asaltoActual;
+    private static final int TOTAL_ASALTOS = 3; 
+}
 
 }
