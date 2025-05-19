@@ -283,9 +283,25 @@ class CompetenciaAmater{
                     System.out.println("¡El combate termina en EMPATE!");
                 }
             }
-        }
+    }
 
-        
+    /*ejecutar */
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("BIENVENIDO AL SIMULADOR DE COMBATES AMATEUR");
+        System.out.println("-------------------------------------------");
+
+        System.out.println("Datos de la esquina roja: ");
+        System.out.print("Nombre: ");
+        String nombre1 = scanner.nextLine();
+        System.out.println("Peso (kg): ");
+        double peso1 = scanner.nextDouble();
+        scanner.nextLine();
+        System.out.print("Estilo (1- Kickboxing, 2- MuayThai, 3- Boxeo): ");
+        int estilo1 = scanner.nextInt();
+        scanner.nextLine();
     }
  }
 }
